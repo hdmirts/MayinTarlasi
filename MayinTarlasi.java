@@ -2,7 +2,7 @@ import java.util.Scanner;
 import java.util.Random;
 
 public class MayinTarlasi {
-    // Mayın Tarlasının Görüntüsünü Bastıran Fonksiyon
+    
     public static void TarlaBastir(char x[][]) {
 
         for (int i = 0; i < x[0].length; i++) {
@@ -26,7 +26,7 @@ public class MayinTarlasi {
 
     }
 
-    // Tarlanın Görünümünü Ve Random Olarak Mayınları Yerleştiren Fonksiyon
+    
     public static void TarlaOlustur(boolean x[][], char TarlaGorunus[][]) {
         Random rnd = new Random();
         for (int i = 0; i < x.length; i++) {
@@ -53,7 +53,7 @@ public class MayinTarlasi {
 
     }
 
-    // Satır Hatalı Giriş Kontrolü
+    
     public static int SatirKontrol(int Satir, Scanner Imput) {
         while ((Satir >= 10) || (Satir < 0)) {
             System.out.println("Satir Hatali!");
@@ -63,7 +63,7 @@ public class MayinTarlasi {
         return Satir;
     }
 
-    // Sütün Hatalı Giriş Kontrolü
+    
     public static int SutunKontrol(int Sutun, Scanner Imput) {
         while ((Sutun >= 10) || (Sutun < 0)) {
             System.out.println("Sutun Hatali!");
@@ -73,8 +73,7 @@ public class MayinTarlasi {
         return Sutun;
     }
 
-    // Oynanış Fonksiyonu Satır Ve Sütün Sayılarını Alıp Mayın Kontrolüne Göre
-    // true-false Değer Döndüren Fonksiyon
+    
     public static boolean Oyna(boolean MayinKonum[][], char TarlaGorunum[][], Scanner Imput) {
         TarlaBastir(TarlaGorunum);
         System.out.println();
@@ -88,7 +87,7 @@ public class MayinTarlasi {
         Sutun = Imput.nextInt();
         Sutun = SutunKontrol(Sutun, Imput);
 
-        // Önceden Girilmiş Konumların Girilmesini Engelleyen Fonksiyon
+      
         while (TarlaGorunum[Satir][Sutun] == '0') {
             System.out.println();
             System.out.println("Bu Konumu Daha Once Girdiniz!");
@@ -135,7 +134,6 @@ public class MayinTarlasi {
         boolean Kontrol = true;
         int HamleSayisi = 0;
 
-        // Oyunun Tekrar Döngüsü Ve Kazanma Kontrolü
 
         while (Kontrol) {
             HamleSayisi++;
